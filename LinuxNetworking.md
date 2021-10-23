@@ -1,4 +1,4 @@
-Get the IP address and netmask from Windows side: ipconfig and look for `vEthernet (WSL)`
+Get the IP address and netmask from Windows side: `ipconfig` and look for `vEthernet (WSL)`
 
 > sudo apt-get update && sudo apt-get install net-tools
 >
