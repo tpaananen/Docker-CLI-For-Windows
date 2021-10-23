@@ -18,8 +18,8 @@ Note: this has not been tested in many situations and there are scenarios where 
 - Install docker-compose: `sudo apt-get update && sudo apt-get install docker-compose`
 - Start the docker service in WSL:
   - `sudo service docker start`
-  - Set docker to start automatically when the instance starts by adding following line to `~/.bashrc`
-  - `wsl.exe -u root service docker status || wsl.exe -u root service docker start`
+  - Set docker to start automatically when the instance starts by issuing following command, adds a line to `~/.bashrc`
+  - `echo "wsl.exe -u root service docker status || wsl.exe -u root service docker start" >> ~/.bashrc`
 - Configure firewall on Windows side (Powershell): `New-NetFirewallRule -DisplayName "WSL" -Direction Inbound -InterfaceAlias "vEthernet (WSL)" -Action Allow`
 - Configure Linux networking (linux-networking.md)
 - Save `docker.cmd` and `docker-compose.cmd` to your machine and add the files and/or location to **PATH**
