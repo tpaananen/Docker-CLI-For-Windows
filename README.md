@@ -20,7 +20,8 @@ Note: this has not been tested in many situations and there are scenarios where 
   - `sudo service docker start`
   - Set docker to start automatically when the instance starts by issuing following command, adds a line to `~/.bashrc`, obviously issued from WSL terminal
   - `echo "wsl.exe -u root service docker status || wsl.exe -u root service docker start" >> ~/.bashrc`
-- Configure firewall on Windows side (Powershell): `New-NetFirewallRule -DisplayName "WSL" -Direction Inbound -InterfaceAlias "vEthernet (WSL)" -Action Allow`
+- Configure firewall on Windows side (Powershell)
+  - `New-NetFirewallRule -DisplayName "WSL" -Direction Inbound -InterfaceAlias "vEthernet (WSL)" -Action Allow`
 - Configure Linux networking (linux-networking.md)
 - Save `docker.cmd` and `docker-compose.cmd` to your machine and add the files and/or location to **PATH**
 - Use docker commands normally as you would be in Linux or using Docker Desktop for Windows
