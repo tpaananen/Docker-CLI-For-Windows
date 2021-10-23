@@ -36,3 +36,7 @@ Profit!
 ## Pros
 
 - It's free
+
+## Docker Desktop
+
+If you need fully featured solution, check out the [Docker Desktop](https://www.docker.com/products/docker-desktop)
