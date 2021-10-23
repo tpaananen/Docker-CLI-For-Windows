@@ -22,7 +22,7 @@ Note: this has not been tested in many situations and there are scenarios where 
   - `echo "wsl.exe -u root service docker status || wsl.exe -u root service docker start" >> ~/.bashrc`
 - Configure firewall on Windows side (Powershell)
   - `New-NetFirewallRule -DisplayName "WSL" -Direction Inbound -InterfaceAlias "vEthernet (WSL)" -Action Allow`
-- Configure Linux networking (linux-networking.md)
+- Configure [Linux networking](https://github.com/tpaananen/DockerCommandsForWindows/blob/main/linux-networking.md)
 - Save `docker.cmd` and `docker-compose.cmd` to your machine and add the files and/or location to **PATH**
 - Use docker commands normally as you would be in Linux or using Docker Desktop for Windows
 - When calling docker from batch files, use `call docker ...` since you are calling another batch file so stderr output won't stop the script
