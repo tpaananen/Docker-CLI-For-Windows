@@ -1,8 +1,14 @@
 # Docker Commands for Windows powered by WSL
 
-This is really simplified console version of Docker Desktop for Windows powered by WSL 2 when you do not need (or your employer for some reason does not get you a lisence) all those fancy features of Docker Desktop (see [lisencing](https://www.docker.com/pricing)). Docker is installed in WSL v2 distribution and docker commands are executed via wsl.exe from Windows using simple batch files to forward arguments and IO in terminal. Expect network to break!
+This is really simplified console version of Docker Desktop for Windows powered by WSL 2 when you do not need (or your employer for some reason does not get you a lisence) all those fancy features of Docker Desktop (see [lisencing](https://www.docker.com/pricing)). Docker is installed in WSL v2 distribution and docker commands are executed via `wsl.exe` from Windows (use your favorite terminal but recommending Windows Terminal Preview with PowerShellCore) using simple batch files to forward arguments and IO in terminal. Expect network to break!
 
 Note: this has not been tested in many situations and there are scenarios where this solution will not work, but for simple docker setups in Windows, it's doing fine.
+
+## Optional setup of the Windows Terminal Preview
+
+- Install Windows Terminal Preview
+- > winget install -e --id Microsoft.WindowsTerminalPreview
+- > winget install -e --id Microsoft.PowerShell
 
 ## Setup
 
