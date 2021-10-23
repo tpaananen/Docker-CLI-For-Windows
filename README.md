@@ -50,6 +50,7 @@ Profit!
 ## Pros
 
 - It's free
+- You will learn use Google! :)
 
 ## Docker Desktop
 
