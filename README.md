@@ -1,5 +1,7 @@
 # Docker Desktop for Windows powered by WSL
 
+## Setup
+
 - Install WSL Ubuntu / Debian etc. Typically on Windows 10 or 11 you just call `wsl --install -d Ubuntu` to install Ubuntu.
 - Go to <https://docs.docker.com/engine/install/ubuntu/> to install docker on WSL Ubuntu
 - Go to <https://docs.docker.com/engine/install/linux-postinstall> to post-install setup
@@ -12,10 +14,10 @@
 - Use docker commands normally as you would be in Linux or using Docker Desktop for Windows
 - When calling docker from batch files, use `call docker ...` since you are calling another batch file so stderr output won't stop the script
 
-After waking up from hibernate:
+## After waking up from hibernate:
 - Reset WSL networking
 
-When using VPN:
+## When using VPN:
 - Disable the vEthernet (WSL) interface before connecting VPN, and enable after connection has been made
 - Additionally, uncheck the VPN item from the vEthernet (WSL) interface
   - `Disable-NetAdapterBinding -Name "vEthernet (WSL)" -ComponentID sgra_vpn`
