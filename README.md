@@ -28,7 +28,7 @@ Note: this has not been tested in many situations and there are scenarios where 
 
 ## After waking up from hibernate
 
-- Reset WSL networking if your containers need network access
+- Reset WSL networking if your containers need network access outside the machine.
 
 ## Docker in WSL with VPN
 
