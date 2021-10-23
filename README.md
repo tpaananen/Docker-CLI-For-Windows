@@ -12,7 +12,7 @@ Note: this has not been tested in many situations and there are scenarios where 
   - Set docker to start automatically when the instance starts by adding following line to `~/.bashrc`
   - `wsl.exe -u root service docker status || wsl.exe -u root service docker start`
 - Configure firewall on Windows side (Powershell): `New-NetFirewallRule -DisplayName "WSL" -Direction Inbound -InterfaceAlias "vEthernet (WSL)" -Action Allow`
-- Configure Linux networking (ifconfig.sh)
+- Configure Linux networking (LinuxNetworking.md)
 - Add script files and/or location to PATH
 - Use docker commands normally as you would be in Linux or using Docker Desktop for Windows
 - When calling docker from batch files, use `call docker ...` since you are calling another batch file so stderr output won't stop the script
