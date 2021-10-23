@@ -9,6 +9,7 @@ Note: this has not been tested in many situations and there are scenarios where 
 - Install WSL Ubuntu / Debian etc. Typically on Windows 10 or 11 you just call `wsl --install -d Ubuntu` to install Ubuntu.
 - Go to <https://docs.docker.com/engine/install/ubuntu/> to install docker on WSL Ubuntu
 - Go to <https://docs.docker.com/engine/install/linux-postinstall> to post-install setup
+- Install docker-compose: `sudo apt-get update && sudo apt-get install docker-compose`
 - Start the docker service in WSL:
   - `sudo service docker start`
   - Set docker to start automatically when the instance starts by adding following line to `~/.bashrc`
