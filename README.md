@@ -6,7 +6,7 @@ Note: this has not been tested in many situations and there are scenarios where 
 
 ## Optional setup of the Windows Terminal Preview
 
-At the time of writing this, Windows Terminal Preview offers on neat feature missing from the stable version where you can set the default process for the cmd.exe. So when you type cmd.exe in run/search -> it will launch cmd inside Windows Terminal instead of the default terminal application Windows Console Host. This feature seems to be available only in Windows 11.
+At the time of writing this, Windows Terminal Preview offers one neat feature missing from the stable version where you can set the default terminal application. So when you type cmd.exe in run/search -> it will launch cmd inside Windows Terminal instead of the default terminal application Windows Console Host. This feature seems to be available only in Windows 11.
 
 - Install Windows Terminal Preview and PowerShellCore
   - `winget install -e --id Microsoft.WindowsTerminalPreview`
