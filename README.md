@@ -6,7 +6,7 @@ Note: this has not been tested in many situations and there are scenarios where 
 
 ## Optional setup of the Windows Terminal Preview
 
-- Install Windows Terminal Preview
+- Install Windows Terminal Preview and PowerShellCore
   - `winget install -e --id Microsoft.WindowsTerminalPreview`
   - `winget install -e --id Microsoft.PowerShell`
 
