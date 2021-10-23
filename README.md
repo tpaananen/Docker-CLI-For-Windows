@@ -21,7 +21,7 @@ Note: this has not been tested in many situations and there are scenarios where 
 
 - Reset WSL networking if your containers need network access
 
-## When using VPN
+## Docker in WSL with VPN
 
 - Disable the vEthernet (WSL) interface before connecting VPN, and enable after connection has been made
 - Additionally, uncheck the VPN item from the vEthernet (WSL) interface
