@@ -1,5 +1,7 @@
 # Docker Desktop for Windows powered by WSL
 
+Note: this has not been tested in many situations and there are scenarios where this solution will not work, but for simple docker setups in Windows, it's doing fine.
+
 ## Setup
 
 - Install WSL Ubuntu / Debian etc. Typically on Windows 10 or 11 you just call `wsl --install -d Ubuntu` to install Ubuntu.
