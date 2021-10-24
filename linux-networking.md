@@ -1,3 +1,5 @@
+# Linux networking
+
 Get the IP address and netmask from Windows side: `ipconfig` and look for `vEthernet (WSL)`
 
 Execute some some commands in WSL side:
