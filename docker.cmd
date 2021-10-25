@@ -19,5 +19,6 @@ IF "%help%"=="--help" (
   echo 7. Use docker commands normally as you would be in Linux or using Docker Desktop for Windows
   echo 8. When calling docker from batch files, use `call docker ...` since you are calling another batch file so stderr output won't stop the script
 ) ELSE (
+  :: use -d distribution name option if not using the default distribution, e.g. wsl.exe -d Debian docker %*
   wsl.exe docker %*
 )
