@@ -14,7 +14,7 @@ At the time of writing this, Windows Terminal Preview offers one neat feature mi
 
 ## Setup
 
-- [Install WSL](https://docs.microsoft.com/en-us/windows/wsl/install) Ubuntu / Debian etc. Typically on Windows 10 or 11 you just call `wsl --install -d Ubuntu` to install Ubuntu.
+> - [Install WSL](https://docs.microsoft.com/en-us/windows/wsl/install) Ubuntu / Debian etc. Typically on Windows 10 or 11 you just call `wsl --install -d Ubuntu` to install Ubuntu.
 - Go to <https://docs.docker.com/engine/install/ubuntu/> to install docker on WSL Ubuntu
 - Go to <https://docs.docker.com/engine/install/linux-postinstall> to post-install setup
 - Install docker-compose: `sudo apt-get update && sudo apt-get install docker-compose`
@@ -25,13 +25,19 @@ At the time of writing this, Windows Terminal Preview offers one neat feature mi
 - Configure firewall on Windows side (Powershell)
   - `New-NetFirewallRule -DisplayName "WSL" -Direction Inbound -InterfaceAlias "vEthernet (WSL)" -Action Allow`
 - Configure [Linux networking](https://github.com/tpaananen/DockerCommandsForWindows/blob/main/linux-networking.md)
-- Save `docker.cmd` and `docker-compose.cmd` to your machine and add the files and/or location to **PATH**
+- Save `docker.cmd` and `docker-compose.cmd` to your Windows machine and add the files and/or location to **PATH** (restart terminal to get the updated PATH)
 - Use docker commands normally as you would be in Linux or using Docker Desktop for Windows
 - When calling docker from batch files, use `call docker ...` since you are calling another batch file so stderr output won't stop the script
+  - If you have a script to start just a single container, like database you could say
+  > - `call docker stop sqlserver`
+  > - `call docker rm sqlserver`
+  > - `call docker pull mcr.microsoft.com/mssql/server:latest`
+  > - `call docker run ...`
 
-## After waking up from hibernate
+## After waking up from hibernation
 
-- Reset WSL networking if your containers need network access outside the machine.
+- If WSL network is down after waking up from hibernation, reset the WSL networking if your containers need network access outside the machine.
+- This seems to be working fine for me now when not using Docker Desktop, since I have started paying attention to VPN attached to WSL network interface (always unchecking it, see below).
 
 ## Docker in WSL with VPN
 
@@ -44,8 +50,8 @@ Profit!
 
 ## Cons
 
-- You usually need to reset networking after waking up from hibernate
-- Networking is painful when VPN needs to be used
+- Networking is sometimes painful when VPN needs to be used
+- Connection from application running in a container to Windows host may be painful to ge to work 
 
 ## Pros
 
