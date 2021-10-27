@@ -14,17 +14,30 @@ At the time of writing this, Windows Terminal Preview offers one neat feature mi
 
 ## Setup
 
-> - [Install WSL](https://docs.microsoft.com/en-us/windows/wsl/install) Ubuntu / Debian etc. Typically on Windows 10 or 11 you just call `wsl --install -d Ubuntu` to install Ubuntu.
+### Install WSL and Ubuntu
+- [Install WSL](https://docs.microsoft.com/en-us/windows/wsl/install) Ubuntu / Debian etc. Typically on Windows 10 or 11 you just call `wsl --install -d Ubuntu` to install Ubuntu.
+
+### Install docker and docker-compose to Ubuntu
+
 - Go to <https://docs.docker.com/engine/install/ubuntu/> to install docker on WSL Ubuntu
 - Go to <https://docs.docker.com/engine/install/linux-postinstall> to post-install setup
 - Install docker-compose: `sudo apt-get update && sudo apt-get install docker-compose`
+
+### Set docker service to start when interactive session of the instance starts
+
 - Start the docker service in WSL:
   - `sudo service docker start`
   - Set docker to start automatically when the instance starts by issuing following command, adds a line to `~/.bashrc`, obviously issued from WSL terminal
   - `echo "wsl.exe -u root service docker status || wsl.exe -u root service docker start" >> ~/.bashrc`
+
+### Configure networking
+
 - Configure firewall on Windows side (Powershell)
   - `New-NetFirewallRule -DisplayName "WSL" -Direction Inbound -InterfaceAlias "vEthernet (WSL)" -Action Allow`
 - Configure [Linux networking](https://github.com/tpaananen/DockerCommandsForWindows/blob/main/linux-networking.md)
+
+### Copy and run docker and docker-compose commands
+
 - Save `docker.cmd` and `docker-compose.cmd` to your Windows machine and add the files and/or location to **PATH** (restart terminal to get the updated PATH)
   - Configure environment variables also to linux side if needed (export calls in ~/.bashrc). docker.cmd and docker-compose.cmd invoke docker/compose calls within interactive bash so it also loads enviroment variables.
 - Use docker commands normally as you would be in Linux or using Docker Desktop for Windows
