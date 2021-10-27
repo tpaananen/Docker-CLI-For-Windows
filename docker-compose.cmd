@@ -8,6 +8,6 @@ IF "%help%"=="--help" (
   echo 3. Here we assumed you have docker installed and running in WSL Debian based Linux
   echo 4. Add this script or location of this script to PATH
 ) ELSE (
-  :: use -d distribution name option if not using the default distribution, e.g. wsl.exe -d Debian docker-compose %*
-  wsl.exe docker-compose %*
+  :: use -d distribution_name option for wsl.exe if not using the default distribution, e.g. wsl.exe -d Debian bash -i -c "docker-compose %*"
+  wsl.exe bash -i -c "docker-compose %*"
 )
