@@ -26,6 +26,7 @@ At the time of writing this, Windows Terminal Preview offers one neat feature mi
   - `New-NetFirewallRule -DisplayName "WSL" -Direction Inbound -InterfaceAlias "vEthernet (WSL)" -Action Allow`
 - Configure [Linux networking](https://github.com/tpaananen/DockerCommandsForWindows/blob/main/linux-networking.md)
 - Save `docker.cmd` and `docker-compose.cmd` to your Windows machine and add the files and/or location to **PATH** (restart terminal to get the updated PATH)
+  - Configure environment variables also to linux side if needed (export calls in ~/.bashrc). docker.cmd and docker-compose.cmd invoke docker/compose calls within interactive bash so it also loads enviroment variables.
 - Use docker commands normally as you would be in Linux or using Docker Desktop for Windows
 - When calling docker from batch files, use `call docker ...` since you are calling another batch file so stderr output won't stop the script
   - If you have a script to start just a single container, like database you could say
@@ -51,7 +52,8 @@ Profit!
 ## Cons
 
 - Networking is sometimes painful when VPN needs to be used
-- Connection from application running in a container to Windows host may be painful to ge to work 
+- Connection from application running in a container to Windows host may be painful to ge to work
+- You need to specify environment variables also to linux side
 
 ## Pros
 
