@@ -15,7 +15,7 @@ At the time of writing this, Windows Terminal Preview offers one neat feature mi
 ## Setup
 
 ### Install WSL and Ubuntu
-- [Install WSL](https://docs.microsoft.com/en-us/windows/wsl/install) Ubuntu / Debian etc. Typically on Windows 10 or 11 you just call `wsl --install -d Ubuntu` to install Ubuntu.
+- [Install WSL](https://docs.microsoft.com/en-us/windows/wsl/install) Ubuntu / Debian etc. Typically on Windows 10 or 11 you just call `wsl --install -d Ubuntu` to install Ubuntu. If the WSL feature has not been enabled yet, one can enable it from the Control panel using "Turn Windows features on or off" option.
 
 ### Install docker and docker-compose to Ubuntu
 
