@@ -1,6 +1,6 @@
 # Docker CLI for Windows powered by WSL
 
-This is a simplified project that provides docker CLI for Windows powered by WSL2 without [Docker Desktop](https://www.docker.com/products/docker-desktop). When you do not need (or your employer for some reason does not get you a lisence) all those fancy features of [Docker Desktop](https://www.docker.com/products/docker-desktop) (see [lisencing](https://www.docker.com/pricing)). Docker is installed in WSL v2 distribution and docker commands are executed via `wsl.exe` from Windows (use your favorite terminal but recommending Windows Terminal Preview with PowerShellCore) using simple batch files to forward arguments in terminal.
+This is a simplified project that provides docker CLI for Windows powered by WSL2 without [Docker Desktop](https://www.docker.com/products/docker-desktop). When you do not need (or your employer for some reason does not get you a lisence) all those fancy features of [Docker Desktop](https://www.docker.com/products/docker-desktop) (see [lisencing](https://www.docker.com/pricing)). Docker is installed in WSL v2 linux distribution (personally using Ubuntu) and docker commands are executed via `wsl.exe` from Windows (use your favorite terminal but recommending Windows Terminal Preview with PowerShellCore) using simple batch files to forward arguments in terminal.
 
 Note: this has not been tested in many situations and there are scenarios where this solution will not work, but for simple docker setups in Windows, it's doing fine.
 
