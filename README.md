@@ -39,7 +39,7 @@ At the time of writing this, Windows Terminal Preview offers one neat feature mi
 
 - Save `docker.cmd` and `docker-compose.cmd` to your Windows machine and add the files and/or location to **PATH** (restart terminal to get the updated PATH)
   - Configure environment variables also to linux side if needed (export calls in ~/.bashrc). docker.cmd and docker-compose.cmd invoke docker/compose calls within interactive bash so it also loads enviroment variables.
-- Use docker commands normally as you would be in Linux or using Docker Desktop for Windows
+- Now you can use docker commands normally as you would be in Linux or using Docker Desktop for Windows
 - When calling docker from batch files, use `call docker ...` since you are calling another batch file so stderr output won't stop the script
   - If you have a script to start just a single container, like database you could say
   > - `call docker stop sqlserver`
