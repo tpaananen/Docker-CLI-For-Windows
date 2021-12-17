@@ -61,17 +61,6 @@ At the time of writing this, Windows Terminal Preview offers one neat feature mi
 
 Profit!
 
-## Cons
-
-- Networking is sometimes painful when VPN needs to be used
-- Connection from application running in a container to Windows host may be painful to ge to work
-- You need to specify environment variables also to linux side
-
-## Pros
-
-- It's free for all
-- You will learn use Google! :)
-
 ## Docker Desktop
 
 If you need fully featured solution, check out the [Docker Desktop](https://www.docker.com/products/docker-desktop)
