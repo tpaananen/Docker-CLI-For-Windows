@@ -34,7 +34,6 @@ At the time of writing this, Windows Terminal Preview offers one neat feature mi
 
 - Configure firewall on Windows side (Powershell)
   - `New-NetFirewallRule -DisplayName "WSL" -Direction Inbound -InterfaceAlias "vEthernet (WSL)" -Action Allow`
-- Configure [Linux networking](https://github.com/tpaananen/DockerCommandsForWindows/blob/main/linux-networking.md)
 
 ### Copy and run docker and docker-compose commands
 
